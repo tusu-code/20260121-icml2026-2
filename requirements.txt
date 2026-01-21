@@ -1,0 +1,8 @@
+# Minimal runtime requirements for generating demo GIFs from a Sa2VA HF model
+# (No training dependencies)
+
+torch
+transformers
+numpy
+pillow
+opencv-python
