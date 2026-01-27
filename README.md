@@ -1,4 +1,4 @@
-# 🎬 Demo (Code + Assets)
+# 🎬 Anonymous Demo (Code + Assets)
 
 This repository contains:
 - **Demo assets**: `assets/demo.gif`, `assets/demo_seg.gif`
@@ -37,3 +37,28 @@ Outputs are saved under `./outputs/demo1/`.
 ## Notes
 - Model weights are **NOT** included.
 - The overlay GIF renders a **single automatically selected mask** (picked to be the most "single-object" among all predicted masks).
+
+---
+
+## dw012 Training / Conversion / Evaluation (templates)
+
+This repo includes **template configs and scripts** under `configs/` and `scripts/`:
+- `configs/dw012_calib_template.py`
+- `configs/dialogue_boost_template.py`
+- `scripts/train_dw012_calib.sh`
+- `scripts/convert_to_hf.sh`
+- `scripts/eval_revos_mevisu.sh`
+
+These are **command/config templates** to document how dw012-style runs were executed.
+They intentionally do **not** include any model weights.
+
+---
+
+## Extra utilities included (anonymous)
+
+Under `main_core/tools/` we also include:
+- `tools/train/wait_any_gpu_then_run.sh`: utility to queue a job on any free GPU.
+- `tools/eval/eval_revos.py`: compute ReVOS metrics from a `results.json`.
+- `tools/eval/eval_mevis.py`: compute MeVIS_U metrics from a `results.json`.
+
+These scripts are provided to document our evaluation pipeline. They may still require the full upstream Main repo and datasets.
